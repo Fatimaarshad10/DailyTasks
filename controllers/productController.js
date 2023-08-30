@@ -23,7 +23,8 @@ const Add_products = async (req,res)=>{
     const savedProduct = await newProduct.save();
     res.status(201).json(savedProduct);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to add product' });
+    console.log(error)
+    res.status(500).json({ error: error });
   }
 };
 // delete the products 
