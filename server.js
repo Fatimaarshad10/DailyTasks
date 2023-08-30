@@ -7,7 +7,7 @@ const app = express();
 
 // middlewares 
 app.use(express.json());
-app.use(verifyToken.unless({ path: '/products/login' }));
+// app.use(verifyToken.unless({ path: '/products/login' }));
 app.use('/products', productRoutes)
 
 
